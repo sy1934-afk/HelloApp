@@ -1,46 +1,64 @@
 /**
- * OOPSBannerApp UC2 – Banner Display
+ * OOPSBannerApp
  *
- * Displays OOPS in 7-line ASCII Banner Format
+ * UC4: Render "OOPS" banner using String Array and Loop
  *
- * @author Developer
- * @version 2.0
+ * @author YourName
+ * @version 1.3
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        String O1_line1 = "  *****  ";
-        String O1_line2 = " *     * ";
-        String O1_line3 = " *     * ";
-        String O1_line4 = " *     * ";
-        String O1_line5 = " *     * ";
-        String O1_line6 = " *     * ";
-        String O1_line7 = "  *****  ";
+        // Step 1: Create String array for banner lines
+        String[] bannerLines = new String[7];
 
-        String P_line1 = " ******* ";
-        String P_line2 = " *     * ";
-        String P_line3 = " *     * ";
-        String P_line4 = " ******* ";
-        String P_line5 = " *       ";
-        String P_line6 = " *       ";
-        String P_line7 = " *       ";
+        // Step 2: Populate array using String.join()
+        bannerLines[0] = String.join("",
+                "  *****  ",
+                "  *****  ",
+                "  ****** ",
+                "  *****  ");
 
-        String S_line1 = "  *****  ";
-        String S_line2 = " *     * ";
-        String S_line3 = " *       ";
-        String S_line4 = "  *****  ";
-        String S_line5 = "       * ";
-        String S_line6 = " *     * ";
-        String S_line7 = "  *****  ";
+        bannerLines[1] = String.join("",
+                " **     **",
+                " **     **",
+                " **    ** ",
+                " **       ");
 
-        System.out.println(O1_line1 + O1_line1 + P_line1 + S_line1);
-        System.out.println(O1_line2 + O1_line2 + P_line2 + S_line2);
-        System.out.println(O1_line3 + O1_line3 + P_line3 + S_line3);
-        System.out.println(O1_line4 + O1_line4 + P_line4 + S_line4);
-        System.out.println(O1_line5 + O1_line5 + P_line5 + S_line5);
-        System.out.println(O1_line6 + O1_line6 + P_line6 + S_line6);
-        System.out.println(O1_line7 + O1_line7 + P_line7 + S_line7);
+        bannerLines[2] = String.join("",
+                " **     **",
+                " **     **",
+                " **    ** ",
+                " **       ");
 
+        bannerLines[3] = String.join("",
+                " **     **",
+                " **     **",
+                " ******   ",
+                "  *****   ");
+
+        bannerLines[4] = String.join("",
+                " **     **",
+                " **     **",
+                " **       ",
+                "        **");
+
+        bannerLines[5] = String.join("",
+                " **     **",
+                " **     **",
+                " **       ",
+                "        **");
+
+        bannerLines[6] = String.join("",
+                "  *****  ",
+                "  *****  ",
+                " **       ",
+                "  ******  ");
+
+        // Step 3: Loop and print
+        for (String line : bannerLines) {
+            System.out.println(line);
+        }
     }
 }
